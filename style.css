@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%)
+}
+
+body{
+    background-color: var(--light-gray);
+    min-height: 100vh;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container{
+    padding: 3rem;
+    color: var(--light-gray);
+}
+
+img{
+    margin-bottom: 1.5rem;
+}
+
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+p{
+    color: var(--Transparent-white);
+    line-height: 1.7;
+}
+
+button{
+    background-color: var(--light-gray);
+    font-weight: bold;
+    border: 2px solid var(--light-gray);
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    margin-top: 5rem;
+    transition: all .3s;
+}
+
+button:hover{
+    cursor: pointer;
+    border: 2px solid var(--light-gray);
+}
+
+/* special component design */
+#sedans{
+    background-color: var(--Bright-orange);
+    border-radius: .5rem 0 0 .5rem;
+}
+#sedans button{
+    color:var(--Bright-orange);
+}
+#sedans button:hover{
+    background-color: var(--Bright-orange);
+    color: var(--light-gray);
+}
+
+#suvs{
+    background-color: var(--Dark-cyan);
+}
+#suvs button{
+    color:var(--Dark-cyan);
+}
+#suvs button:hover{
+    background-color: var(--Dark-cyan);
+    color: var(--light-gray);
+}
+
+#luxury{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 .5rem .5rem 0;
+}
+#luxury button{
+    color:var(--Very-dark-cyan);
+}
+#luxury button:hover{
+    background-color: var(--Very-dark-cyan);
+    color: var(--light-gray);
+}
+
+/* reponsive mobile design */
+@media only screen and (max-width:600px){
+    main{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 2rem auto;
+    }
+
+    button{
+        margin-top: 2rem;
+    }
+
+    #sedans{
+        border-radius: .5rem .5rem 0 0;
+    }
+
+    #luxury{
+        border-radius: 0 0 .5rem .5rem;
+    }
+}
+
+/* footer section */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
